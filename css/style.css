@@ -1,11 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
 .app {
   border: 1px solid black;
   display: grid;
   grid-template-columns: 200px 1fr;
+  grid-template-rows: 54px auto;
 }
 .app header {
-  border: 1px solid black;
-  grid-column: span 3;
+  align-items: center;
+}
+.app {
+  grid-template-areas: "aside header" "aside main";
+}
+.app header {
+  grid-area: header;
+}
+.app aside {
+  padding-top: 20px;
+  grid-area: aside;
+}
+.app main {
+  grid-area: main;
+}
+
+.logo {
+  margin-left: 35px;
 }
 
 aside {
@@ -34,6 +58,31 @@ aside i {
 
 main {
   border: 1px solid black;
+}
+
+.top-menu {
+  border: 0px solid wheat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 54px;
+}
+.top-menu ul {
+  display: flex;
+  gap: 25px;
+}
+.top-menu li {
+  list-style: none;
+}
+.top-menu a {
+  color: white;
+  text-decoration: none;
+}
+.top-menu .right-top-menu {
+  display: flex;
+  gap: 25px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+@use '../abstract/variables' as *;
+
+@mixin flex-layout{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin active-color{
+    color: $active;
+    opacity: .7;
+}

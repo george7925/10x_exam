@@ -8,3 +8,8 @@
     color: $active;
     opacity: .7;
 }
+@mixin frendly{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}

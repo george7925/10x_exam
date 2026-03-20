@@ -7,6 +7,7 @@
 .app {
   border: 0px solid rgba(201, 199, 199, 0.1843137255);
   display: grid;
+  gap: 5px;
   margin-left: 20px;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 54px auto;
@@ -26,6 +27,48 @@
 }
 .app main {
   grid-area: main;
+}
+
+.frendly {
+  display: grid;
+  border: 1px solid rgba(201, 199, 199, 0.1843137255);
+  border-radius: 10px;
+  grid-template-areas: "aside header header" "aside main frendly";
+}
+.frendly-content {
+  height: 100vh;
+  padding: 20px;
+  border-radius: 10px;
+  grid-area: frendly;
+  border: 1px solid rgba(201, 199, 199, 0.1843137255);
+}
+.frendly-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.frendly-icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.frendly-icon i {
+  cursor: pointer;
+  color: #b9b9b9;
+}
+.frendly-card {
+  display: flex;
+  gap: 20px;
+}
+.frendly-list {
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.frendly img {
+  width: 50px;
 }
 
 .logo {
@@ -56,6 +99,10 @@ aside i {
   margin-right: 15px;
 }
 
+body.liked-page .asid-icons .liked a[href="liked.html"] {
+  color: #fff;
+}
+
 main {
   border: 1px solid rgba(201, 199, 199, 0.1843137255);
   padding: 20px;
@@ -73,6 +120,7 @@ main {
 .top-menu ul {
   display: flex;
   gap: 25px;
+  align-items: center;
 }
 .top-menu li {
   list-style: none;
@@ -94,6 +142,16 @@ main {
 .top-menu a {
   cursor: pointer;
   color: #b9b9b9;
+}
+.top-menu .users-active a[href="frend.html"] i {
+  color: #fff;
+}
+
+.home-btn {
+  padding: 15px 20px;
+  background: #1e1e1e;
+  width: 170px;
+  border-radius: 10px;
 }
 
 .section-title {
@@ -234,6 +292,143 @@ body {
 
 .card::after {
   top: -16px;
+}
+
+.songs {
+  padding: 20px;
+  color: #fff;
+}
+.songs__header {
+  display: grid;
+  grid-template-columns: 50px 2fr 2fr 1fr;
+  padding: 10px 0;
+  color: #aaa;
+  font-size: 14px;
+}
+.songs__list {
+  margin-top: 10px;
+}
+
+.song {
+  display: grid;
+  grid-template-columns: 50px 2fr 2fr 1fr;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.song:hover {
+  background: #1a1a1a;
+}
+.song__index {
+  color: #aaa;
+}
+.song__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.song__info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+.song__info h4 {
+  font-size: 14px;
+}
+.song__info p {
+  font-size: 12px;
+  color: #aaa;
+}
+.song__album {
+  color: #aaa;
+  font-size: 13px;
+}
+.song__time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.song__time i {
+  color: #1db954;
+  cursor: pointer;
+}
+
+.song__time i {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.song__time i:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.songs-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #aaa;
+  border-bottom: 1px solid #333;
+}
+.songs-toolbar button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+.songs-toolbar button i {
+  font-size: 14px;
+}
+.songs-toolbar button:hover {
+  color: #fff;
+}
+.songs-toolbar__left {
+  display: flex;
+  gap: 10px;
+}
+.songs-toolbar__left .view {
+  padding: 6px;
+  border-radius: 4px;
+}
+.songs-toolbar__left .view.active {
+  background: #1a1a1a;
+  color: #fff;
+}
+.songs-toolbar__right {
+  display: flex;
+  gap: 15px;
+}
+.songs-toolbar__right button {
+  opacity: 0.8;
+}
+.songs-toolbar__right button:hover {
+  opacity: 1;
+}
+.songs-toolbar__right .search {
+  font-size: 16px;
+}
+
+@media (max-width: 925px) {
+  .frendly-content {
+    display: none;
+  }
+}
+@media (max-width: 775px) {
+  .top-menu, aside {
+    display: none;
+  }
+  .app {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 100% !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
